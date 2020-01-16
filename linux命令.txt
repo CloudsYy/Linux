@@ -1,5 +1,40 @@
-14.sudo update-alternatives --config java(切换java环境，如果有多个jdk的话)
-15.sudo vi ~/.bashrc (以下为配置java环境)：
+Linux初始化配置：
+1.sudo apt-get install ssh -y (1，2一般都已经完成安装了。)
+2.sudo apt-get install vim -y
+3.sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak (备份源文件（这里相当于pom文件，根据源，下载对应的包）)
+4.sudo vi /etc/apt/sources.list 
+以下为阿里云的源：
+deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+5.sudo apt-get update (更新源)
+6.sudo apt-get upgrade -y (升级所有源软件包)
+7.systemctl restart systemd-logind (重启systemd-logind服务)
+8.sudo apt-get install net-tools -y (安装ifconfig,可以查看网络状态)
+9.sudo apt install docker.io -y (安装docker镜像)
+测试
+10.sudo docker --version (查看docker版本)
+11.sudo docker info (查看docker详细的信息)
+12.sudo vi /etc/docker/daemon.json (查看并修改docker加载源)
+{
+ "registry-mirrors": ["http://hub-mirror.c.163.com"]
+}
+13.sudo service docker restart
+14.mv jdk-8u152-linux-x64.tar.gz /usr/local/lib（移动文件）
+15.sudo update-alternatives --config java(切换java环境，如果有多个jdk的话)
+16.sudo vi ~/.bashrc (以下为配置java环境)：
 
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_191 ?## 这里要注意目录要换成自己解压的jdk 目录
 
@@ -8,7 +43,7 @@ export JRE_HOME=${JAVA_HOME}/jre ?
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib ?
 
 export PATH=${JAVA_HOME}/bin:$PATH
-16.source ~/.bashrc
-17.sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_191/bin/java 300
-18.java -version(查看java版本)
+17.source ~/.bashrc
+18.sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_191/bin/java 300
+19.java -version(查看java版本)
 
