@@ -1,0 +1,14 @@
+14.sudo update-alternatives --config java(切换java环境，如果有多个jdk的话)
+15.sudo vi ~/.bashrc (以下为配置java环境)：
+
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_191 ?## 这里要注意目录要换成自己解压的jdk 目录
+
+export JRE_HOME=${JAVA_HOME}/jre ?
+
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib ?
+
+export PATH=${JAVA_HOME}/bin:$PATH
+16.source ~/.bashrc
+17.sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_191/bin/java 300
+18.java -version(查看java版本)
+
