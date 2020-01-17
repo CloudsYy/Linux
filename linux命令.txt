@@ -46,4 +46,14 @@ export PATH=${JAVA_HOME}/bin:$PATH
 17.source ~/.bashrc
 18.sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_191/bin/java 300
 19.java -version(查看java版本)
-
+20.systemctl start docker
+21.查看状态：systemctl status docker
+22.docker pull minio/minio (安装minio)
+23.docker run -p 9000:9000 --name minio-iot -v /mnt/data:/data -v /mnt/config:/root/.minio minio/minio server /data
+23.查找这个目录是哪个应用mount 过来： mount -l |more
+24.查找文件：find -name *.xlsx
+25.-- 备注： 运行安装已经下在的minio : 9000：9000 第一个是外部接口，第二个是内部接口， server 安装到 data
+26.docker run -p 9000:9000 minio/minio server /data
+27.-- tmus 可以共享命令
+28.查看端口：ps -aux |grep  docker
+29.检查docker安装：netstat -an |more docker
