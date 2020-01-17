@@ -57,3 +57,6 @@ export PATH=${JAVA_HOME}/bin:$PATH
 27.-- tmus 可以共享命令
 28.查看端口：ps -aux |grep  docker
 29.检查docker安装：netstat -an |more docker
+30.dpkg --list|grep mysql
+31.sudo apt-get remove mysql-common（这个为例子，可以根据list中删除）
+32.dpkg -l|grep ^rc|awk '{print$2}'|sudo xargs dpkg -P(清除残留痕迹数据(mysql))
