@@ -1,4 +1,4 @@
-﻿Linux初始化配置：
+﻿(ubuntu)Linux初始化配置：
 1.sudo apt-get install ssh -y (1，2一般都已经完成安装了。)
 2.sudo apt-get install vim -y
 3.sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak (备份源文件（这里相当于pom文件，根据源，下载对应的包）)
@@ -60,3 +60,13 @@ export PATH=${JAVA_HOME}/bin:$PATH
 30.dpkg --list|grep mysql
 31.sudo apt-get remove mysql-common（这个为例子，可以根据list中删除）
 32.dpkg -l|grep ^rc|awk '{print$2}'|sudo xargs dpkg -P(清除残留痕迹数据(mysql))
+33.linux 中的保存，:wq保存且退出、 q!不保存强行退出、x保存退出、
+34.ls / ls -a 
+35. 
+set JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.15
+export JAVA_HOME
+set PATH=$JAVA_HOME/bin:$PATH
+export PATH
+set CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export CLASSPATH
+格式：set (需要加的变量名)name=路径		export 变量名name
