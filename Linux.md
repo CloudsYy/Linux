@@ -55,6 +55,8 @@
     systemctl start docker
 #### 7、查看docker容器状态
     systemctl status docker
+#### 8、查看本地镜像
+    docker images
 ## 移动文件
     mv jdk-8u152-linux-x64.tar.gz /usr/local/lib
 ## 切换java环境，如果有多个jdk的话
@@ -134,3 +136,23 @@
     top 
 ## 图标(可运行文件，类似于windows的exe文件等)
     ls ll 其中黄色为硬链接，白色为软链接，软链接相当于图标，修改这个图标不会修改文件本身的内容
+## 查看对应的版本信息，例如：mysql
+    docker search mysql
+## 查看日志
+    docker logs -f mysql
+## 进入mysql
+    1.docker exec -it mysql bash
+    2.mysql -uroot -p
+    接着输入密码，进入mysql内部
+    3.show databases;
+    接下来，可进行数据库操作.
+## 查看tcp进程(端口占用情况)
+    netstat -tanlp
+## 杀死进程(根据PID)
+    sudo kill 18042
+### 关于数据库操作的命令(Linux)-----→[linux 查看数据库和表 mysql 命令](https://my.oschina.net/u/3482619/blog/1613914)
+#### 连接远程服务器
+    1.use mysql;
+    2.select host,user,plugin,authentication_string from mysql.user;
+    3.ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '****';
+    4.ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '****';
