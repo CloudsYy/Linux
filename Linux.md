@@ -1,6 +1,6 @@
-##Linux常用命令总结
+## Linux常用命令总结
 
-###一、(ubuntu)Linux初始化配置：
+### 一、(ubuntu)Linux初始化配置：
 
     1.sudo apt-get install ssh -y (1，2一般都已经完成安装了。)
 
