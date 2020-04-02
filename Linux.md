@@ -4,7 +4,7 @@
 
     2.sudo apt-get install vim -y
 
-    3.sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak (备份源文件（这里相当于pom文件，根据源，下载对应的包）)
+    3.sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak (备份源文件（这里相当于pom文件，根据源，下载对应的包)
 
     4.sudo vi /etc/apt/sources.list 
 
