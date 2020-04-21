@@ -94,6 +94,7 @@
     格式：set (需要加的变量名)name=路径	
     
     export 变量名name
+
 ## docker安装部署minio：
     1.docker pull minio/minio (安装minio)
     
@@ -156,3 +157,40 @@
     2.select host,user,plugin,authentication_string from mysql.user;
     3.ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '****';
     4.ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '****';
+
+### rar文件解压命令
+    1.压缩rar文件：rar a -r test.rar file
+    2.解压文件：unrar x test.rar
+    释义：
+    a : 添加到压缩文件
+    -r : 递归处理
+    x : 以绝对路径解压文件
+    
+### tar文件解压命令
+    1.压缩文件 file1 和目录 dir2 到 test.tar.gz
+    tar -zcvf test.tar.gz file1 dir2
+    2.解压 test.tar.gz（将 c 换成 x 即可）
+    tar -zxvf test.tar.gz
+    3.列出压缩文件的内容
+    tar -ztvf test.tar.gz 
+    释义：
+    -z : 使用 gzip 来压缩和解压文件
+    -v : --verbose 详细的列出处理的文件
+    -f : --file=ARCHIVE 使用档案文件或设备，这个选项通常是必选的
+    -c : --create 创建一个新的归档（压缩包）
+    -x : 从压缩包中解出文件
+    
+### 解压zip文件：
+    1.压缩文件
+    zip -r test.zip file
+    2.解压文件
+    zip test.zip
+    释义：
+    -r : 递归处理
+    
+### docker文件复制
+    1.从宿主机复制文件到docker容器
+    docker cp <host_path/file_name> <contaioner_name>:<path>
+    2.从docker容器复制文件到宿主机
+    docker cp <contaioner_name>:<path/file_name> <host_path>   
+    
