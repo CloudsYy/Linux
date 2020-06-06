@@ -207,4 +207,4 @@
     nohup java -jar mblog-latest.jar >mblog.log &
     
 ### Linux常用命令
-传送阵>>>>>>[Linux常用命令](https://github.com/zhousc1994/linux-learn/blob/master/src/basicCommands/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.md)
+    传送阵>>>>>>[Linux常用命令](https://github.com/zhousc1994/linux-learn/blob/master/src/basicCommands/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.md)
