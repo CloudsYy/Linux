@@ -202,7 +202,7 @@
     du -sh * | sort -n 统计当前文件夹(目录)大小，并按文件大小排序
     du -sk filename 查看指定文件大小
 
-### linux 运行java程序命令
+### Linux 运行java程序命令
     实例:
     nohup java -jar mblog-latest.jar >mblog.log &
     
