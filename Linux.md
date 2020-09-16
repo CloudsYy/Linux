@@ -208,3 +208,20 @@
     
 ### Linux常用命令
     传送阵>>>>>>[Linux常用命令](https://github.com/zhousc1994/linux-learn/blob/master/src/basicCommands/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.md)
+
+### 修改权限
+    -rwxr-xr-- 1 root root 43168 Sep  3  2019 apt-get
+    -rwxr-xr-- 1 root root 43168 Sep  3  2019 docker
+    ls -l docker
+    ls -l apt-get
+    chmod 754 apt-get
+    chmod 754 docker
+
+### 查看文件下的占用大小
+    例如：
+    我们要查看某个下文件夹的占用大小，如查看software文件的大小
+    du -sh software
+    如果，我们要查看当前文件下所有文件夹/文件的大小，可以用：
+    du -sh ./*
+    另外，我们可以用df -h  
+    文件系统的占用情况，百分比查看.
