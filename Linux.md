@@ -38,7 +38,7 @@
     sudo apt-get install net-tools -y 
 ## 对docker的操作    
 #### 1、安装docker镜像
-    sudo apt install docker.io -y
+    sudo apt-get install docker.io -y
 #### 2、查看docker版本    
     sudo docker --version
 #### 3、查看docker详细的信息   
