@@ -225,3 +225,22 @@
     du -sh ./*
     另外，我们可以用df -h  
     文件系统的占用情况，百分比查看.
+    
+### 查看网络文件配置文件
+    
+    vim /etc/netplan/50-cloud-init.yaml
+
+### 修改完网络配置文件后
+    
+    1.使配置文件生效
+    netplan apply
+    2.测试是否网络配置有效
+    netplan try
+    
+### 查看日志
+    
+    less 文件.log     ----查看日志，按回车一行
+    cat 文件.log      ----查看全部日志
+    tail -f 文件.log  ----查看日志
+
+
